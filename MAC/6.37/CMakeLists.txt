@@ -19,6 +19,8 @@ endif()
 
 option(LINK_STD_STATIC "Link std library staticly." OFF)
 option(LINK_ALL_STATIC "Link everything staticly." OFF)
+option(BUILD_SHARED_LIBS "Whether to build static or shared library." OFF)
+option(CMAKE_BUILD_TYPE "Whether to build in release or debug mode." "Release")
 
 if (NOT MSVC)
     if (LINK_STD_STATIC OR LINK_ALL_STATIC)
