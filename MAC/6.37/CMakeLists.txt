@@ -22,6 +22,10 @@ option(LINK_ALL_STATIC "Link everything staticly." OFF)
 option(BUILD_SHARED_LIBS "Whether to build static or shared library." OFF)
 option(CMAKE_BUILD_TYPE "Whether to build in release or debug mode." "Release")
 
+if ("${CMAKE_BUILD_TYPE}" STREQUAL "")
+    set(CMAKE_BUILD_TYPE "Release")
+endif()
+
 if (NOT MSVC)
     if (LINK_STD_STATIC OR LINK_ALL_STATIC)
         check_cxx_compiler_flag("-Werror -static-libstdc++" HAVE_STATIC_STDCXX)
