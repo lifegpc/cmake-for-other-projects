@@ -10,6 +10,10 @@ project(MAC VERSION ${MAC_VERSION})
 include(GNUInstallDirs)
 include(CheckCXXCompilerFlag)
 
+if (MINGW)
+    add_compile_options(-Wp,-w)
+endif()
+
 if (WIN32)
     add_compile_definitions(PLATFORM_WINDOWS)
     if (MINGW)
