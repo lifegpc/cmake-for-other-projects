@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 
 set(MAC_VERSION_MAJOR 7)
-set(MAC_VERSION_MINOR 3)
+set(MAC_VERSION_MINOR 22)
 set(MAC_VERSION_MICRO 0)
 set(MAC_VERSION ${MAC_VERSION_MAJOR}.${MAC_VERSION_MINOR}.${MAC_VERSION_MICRO})
 
@@ -152,9 +152,9 @@ if (MSVC)
     set(MACRC Source/Console/Console.rc)
 endif()
 
-add_executable(MAC Source/Console/Console.cpp Source/Console/resource.h ${MACRC})
-target_include_directories(MAC PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Source/Shared ${CMAKE_CURRENT_SOURCE_DIR}/Source/MACLib)
-target_link_libraries(MAC MACLib)
+add_executable(mac Source/Console/Console.cpp Source/Console/resource.h ${MACRC})
+target_include_directories(mac PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Source/Shared ${CMAKE_CURRENT_SOURCE_DIR}/Source/MACLib)
+target_link_libraries(mac MACLib)
 
-install(TARGETS ${MACDLL} MAC
+install(TARGETS ${MACDLL} mac
 PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/mac)
