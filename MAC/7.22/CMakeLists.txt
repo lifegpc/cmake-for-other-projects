@@ -95,7 +95,7 @@ Source/MACLib/APEDecompress.h Source/MACLib/UnBitArray.h Source/MACLib/UnBitArra
 Source/MACLib/APEHeader.h Source/MACLib/APEInfo.h Source/MACLib/APELink.h
 Source/MACLib/APETag.h Source/MACLib/WAVInputSource.h Source/Shared/CharacterHelper.h
 Source/Shared/CircleBuffer.h Source/Shared/CRC.h Source/Shared/GlobalFunctions.h
-Source/Shared/IO.h Source/MACLib/MACProgressHelper.h Source/MACLib/md5.h
+Source/Shared/IO.h Source/MACLib/MACProgressHelper.h Source/MACLib/MD5.h
 Source/Shared/NoWindows.h Source/MACLib/Prepare.h Source/Shared/SmartPtr.h
 Source/Shared/StdLibFileIO.h Source/Shared/WinFileIO.h
 Source/MACLib/NewPredictor.h Source/MACLib/NNFilter.h Source/MACLib/Predictor.h
